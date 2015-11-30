@@ -1,5 +1,10 @@
 package com.javarush.test.level09.lesson11.home03;
 
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.util.List;
+
 /* Метод в try..catch
 Вводить с клавиатуры числа. Код по чтению чисел с клавиатуры вынести в отдельный метод readData.
 Обернуть все тело (весь код внутри readData, кроме объявления списка, где будут храниться числа и BufferedReader - а) этого метода в try..catch.
@@ -14,5 +19,17 @@ public class Solution {
 
     public static void readData() {
         //напишите тут ваш код
+        List<Integer> integers = new ArrayList<Integer>();
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        try {
+            while (true) {
+                integers.add(Integer.parseInt(reader.readLine()));
+            }
+        }
+        catch (Exception e) {
+            for (Integer integer : integers) {
+                System.out.println(integer);
+            }
+        }
     }
 }
