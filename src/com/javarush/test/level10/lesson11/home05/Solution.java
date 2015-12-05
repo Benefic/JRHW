@@ -28,9 +28,8 @@ public class Solution
         char[] abcArray = abc.toCharArray();
 
         ArrayList<Character> alphabet = new ArrayList<Character>();
-        for (int i = 0; i < abcArray.length; i++)
-        {
-            alphabet.add(abcArray[i]);
+        for (char anAbcArray : abcArray) {
+            alphabet.add(anAbcArray);
         }
 
         //ввод строк
@@ -40,8 +39,6 @@ public class Solution
             String s = reader.readLine();
             list.add(s.toLowerCase());
         }
-
-
 
         //напишите тут ваш код
         for (char ch : alphabet){
