@@ -12,21 +12,21 @@ public class Solution {
 
     interface Person {
         void use(Person person);
-
         void startToWork();
     }
 
     interface Workable {
+
         boolean wantGetExtraWork();
     }
 
-    interface Secretary {
+    interface Secretary extends Person {
     }
 
-    interface Boss {
+    interface Boss extends Person, Workable {
     }
 
-    class CleverMan {
+    class CleverMan implements Boss {
         public void use(Person person) {
             person.startToWork();
         }
@@ -39,7 +39,7 @@ public class Solution {
         }
     }
 
-    class SmartGirl {
+    class SmartGirl implements Secretary {
         public void use(Person person) {
         }
 
