@@ -4,6 +4,7 @@ public final class BodyPart {
     final static BodyPart LEG = new BodyPart("нога");
     final static BodyPart HEAD = new BodyPart("голова");
     final static BodyPart ARM = new BodyPart("рука");
+    final static BodyPart STOPA = new BodyPart("грудь");
 
     private String bodyPart;
 
