@@ -17,13 +17,29 @@ import java.io.InputStreamReader;
 */
 
 public class Solution {
+    public static Flyable result;
+
     static {
         //add your code here - добавьте код тут
+        reset();
     }
-
-    public static Flyable result;
 
     public static void reset() {
         //add your code here - добавьте код тут
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        String param;
+        try {
+            param = reader.readLine();
+            if (param.equals("helicopter")) {
+                result = new Helicopter();
+            } else if (param.equals("plane")) {
+                result = new Plane(Integer.parseInt(reader.readLine()));
+            }
+            reader.close();
+        }
+        catch (IOException e) {
+            e.printStackTrace();
+        }
+
     }
 }
